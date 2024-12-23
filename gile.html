@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Gift Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .gift-box {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: #ff4757;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.2s;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #2f3542;
+            display: none;
+        }
+		#giftMessage{
+			font: "Times New Roman";
+			font-size: 40px;
+		}
+		.hidden{
+			display: none;
+		}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="gift-box" onclick="revealGift()" id='hi'>🎁 Open</div>
+	<p class="message" id="giftMessage">Hello Love,</br>Merry Christmas Grace.
+         You make me one of the happiest people on earth. To this day I still can't believe how lucky </br> I Love Baeee!!!</p>
+</div>
+
+<script>
+    function revealGift() {
+        const message = document.getElementById('giftMessage');
+        message.style.display = 'block';
+		const button = document.getElementsById('hi')
+		button.classList.add('hidden')
+    }
+</script>
+
+</body>
+</html>
